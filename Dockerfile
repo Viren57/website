@@ -4,5 +4,6 @@ RUN rm -f /var/www/html/*
 ADD ./index.html /var/www/html/
 CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
 EXPOSE 80
+ENTRYPOINT apachectl -D FOREGROUND
 ENV name viren
 
